@@ -1,0 +1,8 @@
+# container 접속
+docker exec -it <container> bash
+
+## Apply already running container
+docker update --restart unless-stopped mariadb
+
+## --restart option
+no, on-failure, always, unless-stopped

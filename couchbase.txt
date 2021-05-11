@@ -1,0 +1,7 @@
+couchbase install with docker
+https://hub.docker.com/r/couchbase/server/
+
+
+docker run -d --name couchbase -p 8091-8094:8091-8094 -p 11210:11210 couchbase:community-4.5.1
+
+localhost:8091 접속 후 설정

@@ -1,0 +1,9 @@
+docker run --name mariadb -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=111111 mariadb:10.4 --character-set-server=utf8mb4
+
+docker exec -it mariadb /bin/bash
+
+
+# 
+mysql --protocol=TCP -uroot -p
+
+
