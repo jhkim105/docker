@@ -1,0 +1,35 @@
+----
+docker run -d --name dynamodb -p 8000:8000 amazon/dynamodb-local
+----
+
+http://localhost:8000/shell/
+
+
+aws cli 로 접속
+----
+aws dynamodb list-tables --endpoint-url http://localhost:8000
+----
+
+아래와 같은 오류가 발생하면서 접속이 안되면, region을 x 로 설정하면 된다.
+You must specify a region. You can also configure your region by running "aws configure".
+
+----
+aws configure
+AWS Access Key ID [None]: "fakeMyKeyId"
+AWS Secret Access Key [None]: "fakeSecretAccessKey"
+Default region name [None]: x
+Default output format [None]:
+----
+
+profile 을 지정하고 접속시 지정하여 접속 가능
+----
+aws configure --profile local
+...
+----
+
+----
+aws dynamodb list-tables --endpoint-url http://localhost:8000 --profile myprofile
+----
+
+
+
