@@ -1,0 +1,25 @@
+== Prometheus
+docker: https://prometheus.io/docs/prometheus/latest/installation/
+
+prometheus.yml
+[source,yaml]
+----
+global:
+  scrape_interval: 10s # 10초 마다 Metric 을 Pulling
+  evaluation_interval: 10s
+scrape_configs:
+  - job_name: 'spring-boot-app'
+    metrics_path: '/actuator/prometheus' # Application prometheus endpoint
+    static_configs:
+      - targets: ['host.docker.internal:8080'] # Application host:port
+----
+
+docker run
+[source,shell script]
+----
+docker run --name prometheus -d \
+-p 9090:9090 \
+-v /Users/jihwankim/dev/docker/prometheus/data:/etc/prometheus \
+prom/prometheus
+----
+http://localhost:9090/

@@ -1,0 +1,10 @@
+
+
+=== Volume Mount 확인하기
+docker inspect -f "{{ .Mounts }}" container-name
+----
+➜  docker git:(master) ✗ docker inspect -f "{{ .Mounts }}" prometheus
+[{bind  /Users/jihwankim/dev/docker/prometheus/data /etc/prometheus   true rprivate} {volume 0d12d2562032a3f06f344107e7bc64a58f04aac330bbd6378a8f1e82ba91d0c8 /var/lib/docker/volumes/0d12d2562032a3f06f344107e7bc64a58f04aac330bbd6378a8f1e82ba91d0c8/_data /prometheus local  true }]
+----
+
+
