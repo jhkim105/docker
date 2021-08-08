@@ -23,3 +23,15 @@ docker run --name prometheus -d \
 prom/prometheus
 ----
 http://localhost:9090/
+
+flag를 주면 다른 flag도 모두 줘야 함
+----
+docker run --name prometheus -d \
+-p 9090:9090 \
+-v /Users/jihwankim/dev/docker/prometheus/data:/etc/prometheus \
+prom/prometheus \
+--web.enable-lifecycle
+--config.file=/etc/prometheus/prometheus.yml \
+--storage.tsdb.path=/prometheus \
+--web.console.libraries=/usr/share/prometheus/console_libraries --web.console.templates=/usr/share/prometheus/consoles
+----
