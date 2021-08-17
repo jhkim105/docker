@@ -30,7 +30,7 @@ docker run --name prometheus -d \
 -p 9090:9090 \
 -v /Users/jihwankim/dev/docker/prometheus/data:/etc/prometheus \
 prom/prometheus \
---web.enable-lifecycle
+--web.enable-lifecycle \
 --config.file=/etc/prometheus/prometheus.yml \
 --storage.tsdb.path=/prometheus \
 --web.console.libraries=/usr/share/prometheus/console_libraries --web.console.templates=/usr/share/prometheus/consoles
