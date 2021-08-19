@@ -1,8 +1,17 @@
-# container 접속
+## container 접속
 docker exec -it <container> bash
 
 ## Apply already running container
 docker update --restart unless-stopped mariadb
 
-## --restart option
+--restart option
 no, on-failure, always, unless-stopped
+
+
+## docker data 폴더 변경하기
+docker info
+systemctl stop docker.service
+systemctl stop docker.socket
+cp -R /var/lib/docker /DATA/docker
+vi /lib/systemd/system/docker.service
+ExecStart 에 --data-root=/DATA/docker 추가
