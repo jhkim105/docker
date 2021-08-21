@@ -5,5 +5,10 @@ docker exec -it mariadb /bin/bash
 
 # 
 mysql --protocol=TCP -uroot -p
+OR
+mysql -uroot --host 127.0.0.1 -p
+
+docker run --name mariadb-kp2021 -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=111111 mariadb
+
 
 
