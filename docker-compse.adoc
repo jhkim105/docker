@@ -1,0 +1,12 @@
+:hardbreaks:
+docker compose up -d
+docker compose ps
+docker compose run web
+docker compose down
+docker compose start
+docker compose stop
+
+== Refs
+https://docs.docker.com/compose/gettingstarted/
+
+
