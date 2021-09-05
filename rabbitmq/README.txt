@@ -16,3 +16,7 @@ RabbitMQ mqtt websocket path 변경
 기본이 /ws임
 
 echo 'web_mqtt.ws_path = /mqtt' >> /etc/rabbitmq/rabbitmq.conf
+
+
+
+docker run -d --name rabbitmq2 -p 15673:15672 -p 5673:5672 -p 1884:1883 -p 15676:15675 0b3eae4fa8db
