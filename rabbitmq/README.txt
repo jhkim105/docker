@@ -10,6 +10,7 @@ rabbitmq-plugins enable --offline rabbitmq_management
 rabbitmq-plugins enable --offline rabbitmq_mqtt
 rabbitmq-plugins enable --offline rabbitmq_web_mqtt
 rabbitmq-plugins enable --offline rabbitmq_delayed_message_exchange
+rabbitmq-plugins enable --offline rabbitmq_message_deduplication
 
 
 RabbitMQ mqtt websocket path 변경
