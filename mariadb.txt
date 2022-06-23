@@ -12,3 +12,8 @@ docker run --name mariadb-kp2021 -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=111111 m
 
 
 
+
+docker run --name mariadb -d -p 3306:3306 \
+	-e MYSQL_ROOT_PASSWORD=111111 mariadb \
+	-v /Users/jihwankim/dev/docker/mariadb/conf.d:/etc/mysql/conf.d \
+	--character-set-server=utf8mb4
