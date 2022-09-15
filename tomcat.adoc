@@ -7,12 +7,16 @@ docker logs -f tomcat85
 tomcat directory 복사
 ----
 docker cp tomcat85:/usr/local/tomcat/conf .
+docker cp tomcat85:/usr/local/tomcat/logs .
 ----
 
 디렉토리 마운트
 ----
 docker run -d --name tomcat85 -p 8080:8080 \
 -v /Users/jihwankim/dev/docker/tomcat85/conf:/usr/local/tomcat/conf \
+-v /Users/jihwankim/dev/docker/tomcat85/bin:/usr/local/tomcat/bin \
+-v /Users/jihwankim/dev/docker/tomcat85/logs:/usr/local/tomcat/logs \
+-v /Users/jihwankim/dev/docker/tomcat85/webapps:/usr/local/tomcat/webapps \
 tomcat:8.5
 ----
 
