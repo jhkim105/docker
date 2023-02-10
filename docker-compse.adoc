@@ -5,6 +5,7 @@ docker compose run web
 docker compose down
 docker compose start
 docker compose stop
+docker compose config
 
 == Refs
 https://docs.docker.com/compose/gettingstarted/

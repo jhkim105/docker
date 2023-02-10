@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  localstack:
+    image: localstack/localstack:0.14.3
+    container_name: "localstack"
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3,dynamodb
+      - USE_SINGLE_REGION=1
+      - DEFAULT_REGION=ap-northeast-2
+      - HOSTNAME=localhost
+      - HOSTNAME_EXTERNAL=loaclhost
+      - DATA_DIR=${DATA_DIR-/tmp/localstack/data}
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - "${TMPDIR-/tmp/localstack}:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./localstack-init.d:/docker-entrypoint-initaws.d"

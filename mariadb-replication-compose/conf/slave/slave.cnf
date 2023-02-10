@@ -1,0 +1,5 @@
+[mysqld]
+server-id=2
+log-slave_updates=1
+#replicate-ignore-db=mysql
+#replicate-do-db=demo_repl
