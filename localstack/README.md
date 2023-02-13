@@ -1,7 +1,8 @@
 LocalStack Docker
 ===================
 
-## docker-compose.yml
+## Docker Compose 
+### docker-compose.yml
 ```yaml
 version: "3.8"
 
@@ -23,5 +24,6 @@ services:
 
 
 ## Refs
-https://docs.localstack.cloud/getting-started/installation/#starting-localstack-with-docker-compose
-https://github.com/localstack/localstack/blob/master/docker-compose.yml
+https://docs.localstack.cloud/getting-started/installation/#starting-localstack-with-docker-compose  
+https://github.com/localstack/localstack/blob/master/docker-compose.yml  
+https://kwonnam.pe.kr/wiki/aws/localstack  
